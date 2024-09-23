@@ -7,7 +7,7 @@ VERSION = "0.0.1"
 PACKAGE_NAME = "quick_rabbit"
 AUTHOR = "Kevin Lopez Bourdal"
 AUTHOR_EMAIL = "kevin.bourdal@outlook.com"
-URL = "https://github.com/afernandez119"
+URL = "https://github.com/Kevinbourdal"
 
 LICENSE = 'MIT'  # Tipo de licencia
 DESCRIPTION = "Libreria para utilizar rabbit MQ de una forma facil y rapida "

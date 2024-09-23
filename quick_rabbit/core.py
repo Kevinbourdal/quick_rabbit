@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from utils import clear_temp
+from .utils import clear_temp
 import simplejson as json
 import os
 import uuid

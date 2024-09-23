@@ -1,1 +1,1 @@
-from core import RabbitMqClient
+from .core import RabbitMqClient

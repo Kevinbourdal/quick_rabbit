@@ -1,5 +1,5 @@
 from os import remove
-import core as rc
+from .core import RabbitMqClient
 
 
 def clear_temp(dir_name):
@@ -51,7 +51,7 @@ def get_data(host: str, port: int, username: str, password: str, timer: int, cmd
     if data is not None:
         msj = {'pattern': {"cmd": cmd}, 'data': data}
 
-    sr = rc.RabbitMqClient(host, port, username, password, timer)
+    sr = RabbitMqClient(host, port, username, password, timer)
     result = sr.send_and_recive(queue, msj)
     sr.disconnect()
     return result

@@ -71,7 +71,7 @@ class RabbitMqClient(ABC):
             A list of queue names to be declared.
         """
         for i in list_queues:
-            self.rabbit_channel.queue_declare(queue=os.getenv(i), durable=True,
+            self.rabbit_channel.queue_declare(queue=i, durable=True,
                                               arguments={'x-message-ttl': int(self.timer)})
 
     def _parse_response(self, res: dict, status: bool, route=""):

@@ -39,8 +39,7 @@ def get_data(host: str, port: int, username: str, password: str, timer: int, cmd
     return result
 
 
-def consumer(host: str, port: int, username: str, password: str, timer: int, queue: str, constructor,
-             list_queues: list):
+def consumer(host: str, port: int, username: str, password: str, timer: int, queue: str, constructor):
     """
         Starts a consumer that listens to a specific RabbitMQ queue.
 
@@ -71,4 +70,4 @@ def consumer(host: str, port: int, username: str, password: str, timer: int, que
     """
 
     cg = constructor(host, port, username, password, timer)
-    cg.recive(queue, list_queues)
+    cg.recive(queue, [queue])

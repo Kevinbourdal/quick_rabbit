@@ -1,22 +1,4 @@
-from os import remove
 from .core import RabbitMqClient
-
-
-def clear_temp(dir_name):
-    """
-     Removes a temporary directory or file.
-
-    This function deletes the specified directory or file if the provided directory name
-    is not an empty string.
-
-    :param dir_name: str
-        The name or path of the directory or file to be removed.
-        If an empty string is passed, no action is taken.
-    :return: None
-        This function does not return a value.
-    """
-    if dir_name != "":
-        remove(dir_name)
 
 
 def get_data(host: str, port: int, username: str, password: str, timer: int, cmd, queue, data=None):

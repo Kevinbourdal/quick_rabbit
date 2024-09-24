@@ -1,4 +1,3 @@
-from abc import ABC, abstractmethod
 import simplejson as json
 import os
 from os import remove
@@ -6,7 +5,7 @@ import uuid
 import pika
 
 
-class RabbitMqClient(ABC):
+class RabbitMqClient:
     rabbit_channel = None
     props = None
     connection = None
@@ -125,7 +124,6 @@ class RabbitMqClient(ABC):
         print("Info : start consumer")
         self.rabbit_channel.start_consuming()
 
-    @abstractmethod
     def callback(self, ch, method, properties, body):
         """
         Processes a message received from a RabbitMQ queue.

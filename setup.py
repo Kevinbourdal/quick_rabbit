@@ -3,11 +3,11 @@ from setuptools import find_packages, setup
 
 HERE = pathlib.Path(__file__).parent
 
-VERSION = "0.0.10"
+VERSION = "0.0.11"
 PACKAGE_NAME = "quick_rabbit"
 AUTHOR = "Kevin Lopez Bourdal"
 AUTHOR_EMAIL = "kevin.bourdal@outlook.com"
-URL = "https://github.com/Kevinbourdal"
+URL = "https://github.com/Kevinbourdal/quick_rabbit"
 
 LICENSE = 'MIT'  # Tipo de licencia
 DESCRIPTION = "Library to use Rabbit MQ in a quick and easy way"

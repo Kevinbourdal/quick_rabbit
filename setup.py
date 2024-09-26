@@ -3,7 +3,7 @@ from setuptools import find_packages, setup
 
 HERE = pathlib.Path(__file__).parent
 
-VERSION = "0.0.12"
+VERSION = "0.0.13"
 PACKAGE_NAME = "quick_rabbit"
 AUTHOR = "Kevin Lopez Bourdal"
 AUTHOR_EMAIL = "kevin.bourdal@outlook.com"

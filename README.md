@@ -42,9 +42,7 @@ import json
 class your_objt(qr.RabbitMqClient):
     # It's important redefinne this method
     def callback(self, ch, method, properties, body):
-        ch.basic_ack(delivery_tag=method.delivery_tag)
-        self.body = json.loads(body) ## Necesary
-        self.props = properties ## Necesary
+        super().callback(ch, method, properties, body)
         if self.queue == "your_queue":
             self.your_func()
             

@@ -45,7 +45,10 @@ class your_objt(qr.RabbitMqClient):
         super().callback(ch, method, properties, body)
         if self.queue == "your_queue":
             self.your_func()
-            
+    
+    def recive(self, q, list_queue):
+        self._recive(q, list_queue)
+        
     def your_func(self):
         ## logic here
         pass

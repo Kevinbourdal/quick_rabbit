@@ -230,5 +230,8 @@ def clear_temp(dir_name):
     :return: None
         This function does not return a value.
     """
-    if dir_name != "":
+    if isinstance(dir_name, list):
+        for dir in dir_name:
+            remove(dir)
+    else:
         remove(dir_name)
